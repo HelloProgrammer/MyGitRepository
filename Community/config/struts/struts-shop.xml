@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+    <package name="shop" namespace="/" extends="myIntercepter2">
+        
+        <action name="shopAction_*" class="shopAction" method="{1}">
+			<result name="register success" type="redirectAction">shopAction_getAllShop</result>
+			<result name="shops">/JSP/BackStage/Shop/shop_list.jsp</result>
+			<result name="delete" type="redirectAction">shopAction_getAllShop</result>
+			<result name="update" type="redirectAction">shopAction_getAllShop</result>
+			<result name="shop">/JSP/BackStage/Shop/shop_modify.jsp</result>	
+		</action>
+        
+        
+        <action name="findShopAction" class="shopAction" method="findShopByWarehouseId">
+		  <result name="sList" type="json">
+		    <param name="root">result</param>
+		  </result>
+		</action>
+    </package>
+
+</struts>

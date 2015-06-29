@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+    <package name="cart" namespace="/" extends="myIntercepter">
+        
+        <action name="addCartAction" class="cartAction" method="addCart">
+          <result name="add success">/JSP/Stage/cat.jsp</result>
+		</action>
+		<action name="showAllCartByUserAction" class="cartAction" method="showAllCartByUser">
+          <result name="carts">/JSP/Stage/Cart/cart_list.jsp</result>
+		</action>
+		<action name="showOrderAction" class="cartAction" method="showAllCartByUser">
+          <result name="carts">/JSP/Stage/UserOrder/cartuserorder_deal.jsp</result>
+		</action>
+		<action name="deleteCartAction" class="cartAction" method="deleteCart">
+          <result name="delete" type="redirectAction">showAllCartByUserAction</result>
+		</action>
+        
+    </package>
+</struts>

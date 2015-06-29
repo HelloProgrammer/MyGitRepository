@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+    <package name="goodkind" namespace="/" extends="myIntercepter2">
+        <!-- 一级类别 -->
+        <action name="findPkindByNameAction" class="pkindAction" method="findPkindByName">
+			<result name="JSON" type="json">
+			  <param name="root">result</param>
+			</result>
+		</action>
+		<action name="addPkindAction" class="pkindAction" method="addPkind">
+		  <result name="add success" type="redirectAction">listPkindAction</result>
+		</action>
+		<action name="listPkindAction" class="pkindAction" method="showAllPkind">
+		  <result name="pkindlist">/JSP/BackStage/GoodKind/pkind_list.jsp</result>
+		</action>
+		<action name="listAllPkindAction" class="pkindAction" method="findAllPkind">
+		  <result name="sList" type="json">
+		    <param name="root">result</param>
+		  </result>
+		</action>
+		<action name="deletePkindAction" class="pkindAction" method="deletePkind">
+		  <result name="delete" type="redirectAction">listPkindAction</result>
+		</action>
+		<action name="updatePkindAction" class="pkindAction" method="undatePkind">
+		  <result name="update" type="redirectAction">listPkindAction</result>
+		</action>
+		<action name="onePkindAction" class="pkindAction" method="showOnePkind">
+		  <result name="pkind">/JSP/BackStage/GoodKind/pkind_update.jsp</result>
+		</action>
+		<action name="findonePkindAction" class="pkindAction" method="findOnePkind">
+		  <result name="onepkind" type="json">
+		    <param name="root">result</param>
+		  </result>
+		 
+		</action>
+		
+		<action name="delSelectpKindsAction" class="pkindAction" method="delSelectpKinds">
+			<result name="delSelectpKinds" type="redirectAction">listPkindAction</result>
+		
+		</action>
+		<!-- <action name="listonePkindAction" class="pkindAction" method="listOnePkind">
+		  <result name="pkindname" type="json">
+		    <param name="root">result</param>
+		  </result>
+		</action> -->
+        
+        <!-- 下面是二级类别 -->
+        <action name="findKindByNameAction" class="kindAction" method="findKindByName">
+			<result name="JSON" type="json">
+			  <param name="root">result</param>
+			</result>
+		</action>
+		<action name="oneKindAction" class="kindAction" method="showOneKind">
+		  <result name="kind">/JSP/BackStage/GoodKind/kind_update.jsp</result>
+		</action>
+        <action name="addKindAction" class="kindAction" method="addKind">
+		  <result name="add success" type="redirectAction">listKindByPkindIdAction</result>
+		</action>
+		<action name="listKindAction" class="kindAction" method="showAllKind">
+		  <result name="kindlist">/JSP/BackStage/GoodKind/kind_list.jsp</result>
+		</action>
+		<action name="listKindByPkindIdAction" class="kindAction" method="showKindsByPkindId">
+		  <result name="kindslist">/JSP/BackStage/GoodKind/kind_list.jsp</result>
+		</action>
+		<action name="deleteKindAction" class="kindAction" method="deleteKind">
+		  <result name="delete" type="redirectAction">listKindByPkindIdAction</result>
+		</action>
+		<action name="updateKindAction" class="kindAction" method="updateKind">
+		  <result name="update" type="redirectAction">listKindByPkindIdAction</result>
+		</action>
+		
+		
+		<action name="findKindAction" class="kindAction" method="findKindByPkindId">
+		  <result name="sList" type="json">
+		    <param name="root">result</param>
+		  </result>
+		</action>
+		
+		<action name="listKindsAction" class="kindAction" method="listKinds">
+		   <result name="list" type="json">
+		    <param name="root">result</param>
+		  </result>
+		</action>
+		
+		<action name="showOnePkindAction" class="kindAction" method="showOnePkind">
+		   <result name="pkind" type="json">
+		    <param name="root">result1</param>
+		  </result>
+		</action>
+		 <action name="delSelectKindsAction" class="kindAction" method="delSelectKinds">
+		  <result name="delSelectKinds" type="redirectAction">listKindByPkindIdAction</result>
+		  </action>
+    </package>
+
+</struts>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+  <package name="userorder" namespace="/" extends="myIntercepter">
+
+	<action name="transferDataAction" class="userOrderAction" method="transferData">
+		<result name="transfer success">/JSP/Stage/UserOrder/userorder_pay.jsp</result>
+	</action>
+	<action name="transDataAction" class="userOrderAction" method="transData">
+		<result name="trans success">/JSP/Stage/UserOrder/cartuserorder_pay.jsp</result>
+	</action>
+	<action name="addOrderAction" class="userOrderAction" method="addOrder">
+		<result name="add success">/JSP/Stage/UserOrder/userorder_success.jsp</result>
+	</action>
+	<action name="addCartOrderAction" class="userOrderAction" method="addCartOrder">
+		<result name="addc success">/JSP/Stage/UserOrder/userorder_success.jsp</result>
+	</action>
+
+  </package>
+</struts>

@@ -1,0 +1,96 @@
+/*
+search css
+*/
+.search-content input{ width:430px; height:28px; color:#ccc; border:none; float:left;font-family: "Microsoft YaHei"; font-size: 16px; line-height: 1;}
+.search-button input{ width:120px; height:30px; background:#000; color:#fff; border:none; float:left; font-family: "Microsoft YaHei"; font-size: 16px; line-height: 1;}
+.search-boxes{
+position: relative;
+float: left;
+margin-right: 10px;
+width: 550px;
+height: 30px;
+border: 3px solid #000;
+}
+
+/*ul li*/
+.ulli ul{list-style:none;} 
+.ulli li{float:left;} 
+
+/*cart css 购物车*/
+.carts{padding:0 10px; border:1px solid; margin:5px 0}
+.carts ul{list-style:none;} 
+.carts li{float:left; line-height:40px;} 
+
+/*ordercenter 订单中心*/
+.orderc{padding:0 10px; border:1px solid; margin:5px 0}
+.orderc ul{list-style:none;} 
+.orderc li{float:left; line-height:40px;} 
+.orderc div{margin:5px;}
+.orderc .order_line{border-bottom:1px solid}
+
+/*add goods +-号*/
+.ag {list-style:none;} 
+.ag li{float:left;width:15px;} 
+
+/*goods info*/
+.ginfo {list-style:none;} 
+.ginfo li{float:left; width:32%} 
+
+/*single 商品详情*/
+.sinmenu{float:left; width:20%; background-color:#CCC; text-align:center; padding-top:5px; border:1px solid}
+
+/*Commodity_introduction 商品介绍*/
+.com_in{border:1px solid #CCC; line-height:40px; padding:0 2%;}
+.com_pic{padding:1% 2%; border:1px solid #CCC;}
+#cbtn div{color:#fff;background-color:#EEE;}
+#cbtn div h3{font-family:Microsoft YaHei;color:#f40}
+
+/*Evaluation 商品评价*/
+#Evaluation { font-size:small}
+#Evaluation table{ width:100%;}
+#Evaluation td { height:80px; border-bottom:1px solid #CCC;}
+#Evaluation td div { margin-top:7%; margin-left:5px;}
+#Evaluation ul{list-style:none;} 
+#Evaluation li{float:left; border:1px solid #CCC; padding-left:10px} 
+#ebtn div{color:#fff;background-color:#EEE;}
+#ebtn div h3{font-family:Microsoft YaHei;color:#f40}
+
+/*Transaction process 交易流程*/
+.tp ul{list-style:none;} 
+.tp li{float:left; line-height:40px;} 
+
+/*Business information 商家信息*/
+.buinfo {border:1px solid; padding:0 10px}
+.buinfo ul{list-style:none;} 
+.buinfo li{float:left; line-height:40px; width:25%; text-align:left;}
+
+/*Order information 订单信息*/
+.orinfo {border:1px solid; padding:0 10px}
+.orinfo ul{list-style:none;} 
+.orinfo li{float:left; line-height:40px;text-align:left;} 
+
+/*Logistics information 物流信息*/
+.loinfo {border:1px solid; padding:0 10px}
+.loinfo ul{list-style:none;} 
+.loinfo li{float:left; line-height:40px;text-align:left;} 
+.loinfo ul:nth-of-type(2) li{margin-right:20px}
+.loinfo ul:nth-of-type(2) li:nth-of-type(1){margin-right:0px}
+
+/*comment 评价*/
+.comm {border:1px solid; padding:0 10px;margin:5px 0;}
+.comm ul{list-style:none;} 
+.comm li{float:left; line-height:40px;} 
+
+.comm2 {border:1px solid; padding:0 10px;margin:5px 0;}
+.comm2 ul{list-style:none;} 
+.comm2 li{float:left; line-height:40px; margin-right:10px} 
+.comm2 li textarea{margin-top:9px}
+
+/*payment 支付*/
+.paym {border:1px solid; padding:0 10px; margin:5px 0;}
+.paym ul{list-style:none;} 
+.paym li{float:left; line-height:40px;} 
+.paym ul:nth-of-type(2) li{margin-right:20%}
+
+/*validate 验证注册信息*/
+.vali {color:#fe7301; font-size:12px;}

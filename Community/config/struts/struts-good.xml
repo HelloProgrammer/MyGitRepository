@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+    <package name="good" namespace="/" extends="myIntercepter2">
+        
+        <action name="goodAction_*" class="goodAction" method="{1}">
+			<result name="add success" type="redirectAction">goodAction_getAllGood</result>
+			<result name="getAll success">/JSP/BackStage/GoodManage/goods_list.jsp</result>
+			<result name="search success" >/JSP/BackStage/GoodManage/goods_list.jsp</result>
+			<result name="delete success" type="redirectAction">goodAction_getAllGood</result>
+			<result name="to update">/JSP/BackStage/GoodManage/goods_details.jsp</result>
+			<result name="update success" type="redirectAction">goodAction_getAllGood</result>
+			<result name="delSelectGoods" type="redirectAction">goodAction_getAllGood</result>
+			
+			<result name="error">/JSP/BackStage/error.jsp</result>
+			<!-- <result name="users">/JSP/User/user_list.jsp</result>
+			<result name="delete" type="redirectAction">userAction_getAllUser</result>
+			<result name="user">/JSP/User/user_modify.jsp</result>
+			<result name="update" type="redirectAction">userAction_getAllUser</result> -->
+		</action>
+		<action name="findGoodByIdAction" class="goodAction" method="findGoodById">
+		    <result name="goods">/JSP/Stage/UserOrder/userorder_deal.jsp</result>
+		</action>
+		
+        <action name="upload_*" class="com.community.action.FileUploadAction" method="upload_{1}">  
+		<!-- 动态设置Action的属性值 -->  
+			<param name="savePath_images">/UploadImages</param>  
+			<!-- 配置Struts2默认的视图页面 -->  
+			<result>/JSP/BackStage/GoodManage/showUpload.jsp</result>  
+		</action> 
+		<action name="getKindGoodAction" class="goodAction" method="getKindGood">
+		  <result name="getKind success">/JSP/BackStage/GoodManage/goods_list.jsp</result>
+		</action>
+    </package>
+    
+
+</struts>

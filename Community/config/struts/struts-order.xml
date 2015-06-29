@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+    <package name="order" namespace="/" extends="myIntercepter">
+        
+        <action name="orderAction_*" class="orderAction" method="{1}">
+        
+        	<result name="getAll success">/JSP/BackStage/OrderManage/order_list.jsp</result>
+        	<result name="getAllT success">/JSP/BackStage/OrderManage/order_list.jsp</result>
+        	<result name="get order by state">/JSP/BackStage/OrderManage/order_list.jsp</result>
+        	<result name="detail">/JSP/BackStage/OrderManage/order_details.jsp</result>
+        	<result name="update success" type="redirectAction">orderAction_getAllOrder</result>
+        	<result name="accept success" type="redirectAction">orderAction_getAcceptOrder</result>
+        	<result name="refuse success" type="redirectAction">orderAction_getRefuseOrder</result>
+        	<result name="back comment success">/JSP/BackStage/OrderManage/comment.jsp</result>
+        	<result name="manage commment" type="redirectAction">orderAction_OrderDetails</result>	
+        	
+        	<result name="update" type="redirectAction">orderAction_getPersonFinishOrder</result>
+           	<result name="update comment" type="redirectAction">orderAction_FrontOrderDetails</result>
+            <result name="add comment">/JSP/Stage/PersonalHome/order_addComment.jsp</result>
+            <result name="comment">/JSP/Stage/PersonalHome/order_comment.jsp</result>
+        	<result name="get personal">/JSP/Stage/PersonalHome/order_list.jsp</result>
+        	<result name="front detail">/JSP/Stage/PersonalHome/order_details.jsp</result>
+        	<result name="get order by state userid">/JSP/Stage/PersonalHome/order_list.jsp</result>
+        	
+		</action>
+		<action name="listAllWarehouseAction" class="orderAction" method="listWarehouse">
+			<result name="list success" type="json">
+				<param name="root" >result</param>
+			</result>
+		</action>
+		<action name="findOneWarehouseAction" class="orderAction" method="findOneWarehouse">
+			<result name="warehouse" type="json">
+				<param name="root" >result</param>
+			</result>
+		</action>
+    </package>
+
+</struts>

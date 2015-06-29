@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+encoding//WebRoot/JSP/BackStage/Index/background_passwordchange.jsp=UTF-8
+encoding//WebRoot/JSP/BackStage/OrderManage/comment.jsp=UTF-8
+encoding//WebRoot/JSP/BackStage/Parts/header_path.jsp=UTF-8
+encoding//WebRoot/JSP/BackStage/Parts/menu.jsp=UTF-8
+encoding//WebRoot/JSP/BackStage/WareHouse/warehouse_add.jsp=UTF-8
+encoding//WebRoot/JSP/Stage/Part/menu_p.jsp=UTF-8
+encoding//src/com/community/action=UTF-8
+encoding//src/com/community/action/GoodAction.java=UTF-8
+encoding//src/com/community/dao/impl/OrderGoodDaoImpl.java=UTF-8
+encoding//src/com/community/service/impl/CustomerServiceImpl.java=UTF-8
+encoding/<project>=UTF-8

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+    <package name="shopman" namespace="/" extends="myIntercepter2">
+        
+        <action name="shopmanAction_*" class="shopmanAction" method="{1}">
+			<result name="register success" type="redirectAction">shopmanAction_getAllShopman</result>
+			<result name="shopmans">/JSP/BackStage/good/good_list.jsp</result>
+			<!-- <result name="delete" type="redirectAction">shopAction_getAllShop</result>  -->
+			<result name="update" type="redirectAction">shopmanAction_getAllShopman</result>
+			<!-- <result name="shopman">/JSP/BackStage/good/good_modify.jsp</result>	 -->
+		</action>
+        
+        <action name="oneShopmanAction" class="shopmanAction" method="showOneShopman">
+		  <result name="shopman">/JSP/BackStage/good/good_modify.jsp</result>
+		</action>
+		
+		<action name="listShopsAction" class="shopmanAction" method="listShops">
+		   <result name="list" type="json">
+		    <param name="root">result</param>
+		  </result>
+		</action>
+		
+		<action name="showOneWarehouseAction" class="shopmanAction" method="showOneWarehouse">
+		   <result name="warehouse" type="json">
+		    <param name="root">result1</param>
+		  </result>
+		</action>
+        
+        <action name="updateShopmanAction" class="shopmanAction" method="updateShopman">
+		  <result name="update" type="redirectAction">shopmanAction_getAllShopman</result>
+		</action>
+		
+		<action name="addShopmanAction" class="shopmanAction" method="Register">
+		  <result name="register success" type="redirectAction">shopmanAction_getAllShopman</result>
+		</action>
+        
+        <!-- <action name="addShopmanAction" class="shopmanAction" method="Register">
+		  <result name="register success">/JSP/BackStage/manager_add_success.jsp</result>
+		</action>  -->      
+    </package>
+
+</struts>

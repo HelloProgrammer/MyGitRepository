@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+    <package name="manager" namespace="/" extends="myIntercepter2">
+        
+        <action name="managerAction_*" class="managerAction" method="{1}">
+			<result name="register success">/JSP/BackStage/manager_add_success.jsp</result>
+			<!-- <result name="users">/JSP/User/user_list.jsp</result>
+			<result name="delete" type="redirectAction">userAction_getAllUser</result>
+			<result name="user">/JSP/User/user_modify.jsp</result>
+			<result name="update" type="redirectAction">userAction_getAllUser</result> -->
+		</action>
+        
+    </package>
+
+</struts>
